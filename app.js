@@ -22,33 +22,36 @@ mongoose.connect(
 
 // creating mongoose Schema
 const itemsSchema = {
-  name: String,
+  fname: String,
+  lname: String,
+  email: String,
 };
 
 // creating mongoose Model
-const Item = mongoose.model("Item", itemsSchema);
+const Usercollection = mongoose.model("Usercollection", itemsSchema);
 
 // app.get()
 app.get("/", function (req, res) {
-  Item.find()
+  Usercollection.find()
     .then(function (foundItems) {
       console.log(foundItems);
 
       if (foundItems.length === 0) {
-        Item.insertMany()
+        Usercollection.insertMany()
           .then(function () {
             console.log("Successfully saved default items to DB.");
           })
           .catch(function (err) {
             console.log("Error found in saving default items to DB: " + err);
           });
-        res.redirect("/");
+        // res.redirect("/");
       } else {
         res.sendFile(__dirname + "/signup.html");
       }
     })
     .catch(function (err) {
       console.log(err);
+      res.sendFile(__dirname + "/failure.html");
     });
 });
 
@@ -57,22 +60,22 @@ app.post("/", function (req, res) {
   const lastName = req.body.lName;
   const email = req.body.email;
 
-  const item1 = new Item({
-    name: firstName,
+  const userDetails = new Usercollection({
+    fname: firstName,
+    lname: lastName,
+    email: email
   });
 
-  const item2 = new Item({
-    name: lastName,
-  });
+  userDetails.save();
 
-  const item3 = new Item({
-    name: email,
-  });
+  res.redirect("/");
+});
 
-  item1.save();
-  item2.save();
-  item3.save();
+app.post("/success", function (req, res) {
+  res.redirect("/");
+});
 
+app.post("/failure", function (req, res) {
   res.redirect("/");
 });
 
