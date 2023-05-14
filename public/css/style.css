@@ -12,8 +12,12 @@ body {
 }
 
 .form-signin {
-  max-width: 330px;
+  max-width: 500px;
+  max-height: 800px;
   padding: 15px;
+  background-color: aliceblue;
+  border: 1px solid blue;
+  border-radius: 15px;
 }
 
 .form-signin .form-floating:focus-within {
@@ -24,15 +28,18 @@ body {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  padding: 15px;
 }
 
 .middle {
   margin-bottom: -1px;
   border-radius: 0;
+  padding: 15px;
 }
 
 .bottom {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  padding: 15px;
 }

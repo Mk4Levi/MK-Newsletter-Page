@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // app.set()
 app.set("view engine", "ejs");
@@ -63,7 +63,7 @@ app.post("/", function (req, res) {
   const userDetails = new Usercollection({
     fname: firstName,
     lname: lastName,
-    email: email
+    email: email,
   });
 
   userDetails.save();
