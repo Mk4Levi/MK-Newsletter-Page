@@ -3,7 +3,7 @@ body {
   height: 100%;
 }
 
-body {
+.text-center {
   display: flex;
   align-items: center;
   padding-top: 40px;
@@ -42,4 +42,20 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   padding: 15px;
+}
+
+.mk-result {
+  margin: 100px;
+  padding: 50px;
+  position: relative;
+  left: 50px;
+  border: 2px solid greenyellow;
+  border-radius: 20px;
+  max-width: fit-content;
+}
+
+.mk-img {
+  margin-left: 450px;
+  width: 300px;
+  border-radius: 20px;
 }

@@ -29,7 +29,7 @@ npm install
 5. Finally, host it on local server :
 
 ```bash
-node app.js
+npm run dev
 ```
 
 6. Now just search this link in your browser to view the live running application in your Local sysytem :
