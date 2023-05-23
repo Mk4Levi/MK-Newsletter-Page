@@ -2,7 +2,7 @@
 
 ## Website Link => https://manthan-signup-page.onrender.com/
 
-=> This is a signup page for accessing weekly Newsletter on Development and Web-3 related topics.
+=> This is a signup page for accessing weekly Newsletter on Development and Web-3 related topics
 
 <h2>Getting Started</h2>
 
